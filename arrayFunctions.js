@@ -9,9 +9,16 @@
  * getOdds([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> [11, 35, 601, 777, 999]
  */
 function getOdds(numbers) {
-  // Your code here
-}
+  const odd = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] %2===1 ){
+      odd.push (numbers[i]);
+    }
+  }
+  return odd;
 
+}
+console.log(getOdds([20,90,875,66,478,2154]));
 /**
  * getEvens(numbers):
  * - receives an array of numbers called `numbers`
@@ -23,9 +30,16 @@ function getOdds(numbers) {
  * getEvens([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> [52, 14, 56, 888]
  */
 function getEvens(numbers) {
+  const evennumber =[];
+  for (let i = 0; i < numbers.length; ++i){
+    if (numbers[i] % 2 !== 1){
+       evennumber.push (numbers[i]);
+    }
+  }
   // Your code here
+  return evennumber;
 }
-
+ console.log(getEvens([5,6,2,1,9,10,78]));
 /**
  * getDuplicateCount(x, numbers):
  * - receives a number `x`, and an array of numbers called `numbers`
@@ -35,10 +49,20 @@ function getEvens(numbers) {
  * getDuplicateCount(1, [1, 2, 3, 1, 4, 5, 6, 1, 7, 8, 9, 10, 11, 1, 12, 13]) -> 4
  * getDuplicateCount(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]) -> 3
  */
-function getDuplicateCount(x, numbers) {
-  // Your code here
-}
 
+function getDuplicateCount(x, numbers) {
+  
+  let count = 0;
+
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] === x)
+    count++;
+  }
+
+    // Your code here
+    return count;
+}
+console.log(getDuplicateCount(5,[22,33,5,3,5,547,5]));
 /**
  * youGottaCalmDown(s):
  * - receives a string `s`
